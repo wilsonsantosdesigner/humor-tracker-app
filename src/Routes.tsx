@@ -4,6 +4,7 @@ import { DetailPage } from "./screens/Detail";
 import { SetUserNamePage } from "./screens/SetUserName";
 import { RouteProp } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { theme } from "./shared/themes/Theme";
 
 type TScreenDefinitions = {
     home: undefined;
@@ -17,7 +18,10 @@ export const AppRoutes = () => {
     return(
         <Stack.Navigator 
             initialRouteName="home" 
-            screenOptions={{ headerShown: false }}
+            screenOptions={{ 
+                headerShown: false,
+                contentStyle: { backgroundColor: theme.colors.background },
+            }}
             screenLayout={({ children }) => <SafeAreaView>{children}</SafeAreaView> }
         >
             <Stack.Screen 
