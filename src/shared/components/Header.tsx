@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
         fontFamily: theme.fonts.family.regular,
     },
     headerBoldText: {
+        color: theme.colors.primary,
         fontSize: theme.fonts.sizes.title,
         fontFamily: theme.fonts.family.bold,
-        color: theme.colors.primary,
     },
 });
